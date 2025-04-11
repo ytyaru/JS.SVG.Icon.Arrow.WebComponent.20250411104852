@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="light">
 <head>
 <meta charset="utf-8">
 <title></title>
@@ -19,6 +19,19 @@
 </head>
 <body>
     <main>
+        <select id="color-scheme">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+        <script>
+        document.querySelector('#color-scheme').addEventListener('change', (e)=>{
+            const N = e.target.value;
+            const O = 'dark'===N ? 'light' : 'dark';
+            console.log(O, N);
+            console.log(document.documentElement)
+            document.documentElement.classList.replace(O, N);
+        });
+        </script>
         <i is="icon-arrow" dir="top"></i>
         <i is="icon-arrow" dir="bottom"></i>
         <i is="icon-arrow" dir="left"></i>
