@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="light">
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="description" content="">
+<meta name="author" content="ytyaru">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">
+<link rel="icon" href="../asset/image/author/ytyaru.png">
+<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<script src="../lib/van/1.2.6/nomodule.min.js"></script>-->
+<script src="../lib/van/1.5.3/nomodule/min.js"></script>
+<script src="../js/footer.js"></script>
+<script src="../lib/util/type.js"></script>
+<script src="../lib/util/test/assertion.js"></script>
+<script src="js/main.js"></script>
+<script src="js/arrow-icon.js"></script>
+</head>
+<body>
+    <main>
+        <select id="color-scheme">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+        <script>
+        document.querySelector('#color-scheme').addEventListener('change', (e)=>{
+            const N = e.target.value;
+            const O = 'dark'===N ? 'light' : 'dark';
+            console.log(O, N);
+            console.log(document.documentElement)
+            document.documentElement.classList.replace(O, N);
+        });
+        </script>
+        <i is="icon-arrow" dir="top"></i>
+        <i is="icon-arrow" dir="bottom"></i>
+        <i is="icon-arrow" dir="left"></i>
+        <i is="icon-arrow" dir="right"></i>
+        <i is="icon-arrow" dir="top-left"></i>
+        <i is="icon-arrow" dir="top-right"></i>
+        <i is="icon-arrow" dir="bottom-left"></i>
+        <i is="icon-arrow" dir="bottom-right"></i>
+        <i is="icon-arrow" dir="0"></i>
+        <i is="icon-arrow" dir="15"></i>
+        <i is="icon-arrow" dir="30"></i>
+        <i is="icon-arrow" dir="45"></i>
+        <i is="icon-arrow" dir="60"></i>
+        <i is="icon-arrow" dir="75"></i>
+        <i is="icon-arrow" dir="90"></i>
+        <i is="icon-arrow" dir="105"></i>
+        <i is="icon-arrow" dir="120"></i>
+        <i is="icon-arrow" dir="135"></i>
+        <i is="icon-arrow" dir="150"></i>
+        <i is="icon-arrow" dir="165"></i>
+        <i is="icon-arrow" dir="180"></i>
+        <i is="icon-arrow" dir="195"></i>
+        <i is="icon-arrow" dir="210"></i>
+        <i is="icon-arrow" dir="225"></i>
+        <i is="icon-arrow" dir="240"></i>
+        <i is="icon-arrow" dir="255"></i>
+        <i is="icon-arrow" dir="270"></i>
+        <i is="icon-arrow" dir="285"></i>
+        <i is="icon-arrow" dir="300"></i>
+        <i is="icon-arrow" dir="315"></i>
+        <i is="icon-arrow" dir="330"></i>
+        <i is="icon-arrow" dir="345"></i>
+        <i is="icon-arrow" dir="360"></i>
+        <svg width="1em" height="1em"><use href="#icon-symbol-arrow" transform="rotate(270,128,128)"></use></svg>
+
+        <i is="icon-arrow" dir="top" sz="2em"></i>
+        <i is="icon-arrow" dir="bottom" sz="3em"></i>
+        <i is="icon-arrow" dir="left" sz="4em"></i>
+        <i is="icon-arrow" dir="right" sz="5em"></i>
+        <i is="icon-arrow" dir="top" sz="2em" style="color:red;"></i>
+        <i is="icon-arrow" dir="bottom" sz="3em" style="color:green;"></i>
+        <i is="icon-arrow" dir="left" sz="4em" style="color:blue;"></i>
+        <i is="icon-arrow" dir="right" sz="5em" style="color:yellow;"></i>
+    </main>
+    <footer></footer>
+</body>
+</html>
+<!-- https://coliss.com/articles/build-websites/operation/work/html-template-for-web-apps-or-sites.html -->
+<!-- https://coliss.com/articles/build-websites/operation/work/html5-template-for-2018.html -->
