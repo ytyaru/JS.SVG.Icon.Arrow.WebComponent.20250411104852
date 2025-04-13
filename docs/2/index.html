@@ -75,6 +75,49 @@
         <i is="icon-arrow" dir="bottom" sz="3em" style="color:green;"></i>
         <i is="icon-arrow" dir="left" sz="4em" style="color:blue;"></i>
         <i is="icon-arrow" dir="right" sz="5em" style="color:yellow;"></i>
+        <i is="icon-arrow" dir="top" sz="2em" col="red"></i>
+        <i is="icon-arrow" dir="bottom" sz="3em" col="green"></i>
+        <i is="icon-arrow" dir="left" sz="4em" col="blue"></i>
+        <i is="icon-arrow" dir="right" sz="5em" col="yellow"></i>
+
+
+        <h2></h2>
+        <fieldset><legend></legend>
+            <input type="number" id="sz" value="16" min="4" max="1024">px
+            <input type="color" id="col" value="">
+            <input type="number" id="dir" value="0" min="0" max="360">度
+            <input type="number" id="wid" value="16" min="1" max="64">px
+            <select id="stroke-linejoin">
+              <option value="arcs">arcs</option>
+              <option value="bevel">bevel</option>
+              <option value="miter">miter</option>
+              <option value="miter-clip">miter-clip</option>
+              <option value="round">round</option>
+            </select>
+            <input type="number" id="stroke-miterlimit" value="4" min="1" max="16">px
+        </fieldset>
+        <output><i is="icon-arrow" id="dynamic-arrow"></i></output>
+        <script>
+            document.querySelector('#sz').addEventListener('input', (e)=>{
+                document.querySelector('#dynamic-arrow').setAttribute('sz', e.target.value);
+            })
+            document.querySelector('#col').addEventListener('input', (e)=>{
+                document.querySelector('#dynamic-arrow').setAttribute('col', e.target.value);
+            })
+            document.querySelector('#dir').addEventListener('input', (e)=>{
+                document.querySelector('#dynamic-arrow').setAttribute('dir', e.target.value);
+            })
+            document.querySelector('#wid').addEventListener('input', (e)=>{
+                document.querySelector('#dynamic-arrow').setAttribute('wid', e.target.value);
+            })
+            document.querySelector('#stroke-linejoin').addEventListener('input', (e)=>{
+                document.querySelector('#dynamic-arrow').setAttribute('join', e.target.value);
+            })
+            document.querySelector('#stroke-miterlimit').addEventListener('input', (e)=>{
+                document.querySelector('#dynamic-arrow').setAttribute('limit', e.target.value);
+            })
+        </script>
+
     </main>
     <footer></footer>
 </body>
