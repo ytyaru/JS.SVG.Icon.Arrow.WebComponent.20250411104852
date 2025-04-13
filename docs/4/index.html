@@ -95,7 +95,10 @@
               <option value="round">round</option>
             </select>
             <input type="number" id="stroke-miterlimit" value="4" min="1" max="16">px
+            <!--
             <label><input type="checkbox" id="fill">fill</label>
+            -->
+            <input type="range" id="fill-range" value="0" min="0", max="1" step="0.01">
         </fieldset>
         <output><i is="icon-arrow" id="dynamic-arrow"></i></output>
         <script>
@@ -117,11 +120,15 @@
             document.querySelector('#stroke-miterlimit').addEventListener('input', (e)=>{
                 document.querySelector('#dynamic-arrow').setAttribute('limit', e.target.value);
             })
+            /*
             document.querySelector('#fill').addEventListener('change', (e)=>{
                 document.querySelector('#dynamic-arrow').toggleAttribute('fill', e.target.checked);
             })
+            */
             document.querySelector('#fill-range').addEventListener('change', (e)=>{
-                document.querySelector('#dynamic-arrow').toggleAttribute('fill', e.target.checked);
+                console.log(e.target.value)
+                //document.querySelector('#dynamic-arrow').toggleAttribute('fill', e.target.checked);
+                document.querySelector('#dynamic-arrow').setAttribute('fill', e.target.value);
             })
         </script>
 
