@@ -21,7 +21,13 @@ const {h1,p,br,ol,li,footer,small,time,a,img} = van.tags
 window.addEventListener('DOMContentLoaded', async(event) => {
     // 最新版ほどitemsの先頭に配置する。旧版ほど末尾。
     const items = [
-        '最初',
+        'コード整理',
+        '失敗：stroke-widthの値に応じてscaleを変更すればroundのとき角丸が見切れなくなるかと思って試したがダメだった',
+        'fill-opacityで塗りつぶしを0.0〜1.0で指定するようにした（0/1切替でなく）',
+        'fill切替',
+        'stroke-widthを変更可にする（SVG作成時の16を超過するとbevelになってしまう）',
+        'ライト／ダークモード確認（stroke:currentColor, color:black）',
+        'SVGコードをカスタム要素に埋め込んで動的変更できる確認',
     ]
     const { h1, p, ol, li, a, code } = van.tags
     const author = 'ytyaru'
