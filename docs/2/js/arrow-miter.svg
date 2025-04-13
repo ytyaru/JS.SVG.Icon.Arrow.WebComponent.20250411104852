@@ -5,11 +5,15 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg1"
-   viewBox="0 0 256 256"
-   height="256"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
    width="256"
-   version="1.0">
+   height="256"
+   viewBox="0 0 256 256"
+   id="svg1"
+   sodipodi:docname="arrow-miter.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata2">
     <rdf:RDF>
@@ -18,14 +22,51 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
      id="defs4" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="3.0820312"
+     inkscape:cx="60.409552"
+     inkscape:cy="128"
+     inkscape:window-x="0"
+     inkscape:window-y="36"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true"
+     id="namedview10">
+    <sodipodi:guide
+       position="385.121,128"
+       orientation="0,1"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)"
+       id="guide6" />
+    <sodipodi:guide
+       position="128,0"
+       orientation="1,0"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)"
+       id="guide8" />
+  </sodipodi:namedview>
   <path
-     id="rect818"
+     style="opacity:1;fill:none;fill-opacity:0;stroke:#000003;stroke-width:16;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:16,32;stroke-opacity:1;stroke-dashoffset:0"
      d="M 120.13672 19.175781 L 11.314453 128 L 120.13672 236.82422 L 120.13672 176 L 248 176 L 248 80 L 120.13672 80 L 120.13672 19.175781 z "
-     style="opacity:1;fill:none;fill-opacity:0;stroke:#000003;stroke-width:16;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+     id="rect818" />
 </svg>
