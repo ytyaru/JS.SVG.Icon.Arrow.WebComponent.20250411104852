@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="0" height="0">
+<defs>
+<style>
+.static{pointer-events:all;opacity:1;fill-opacity:0;stroke-opacity:1;fill:currentColor;stroke:currentColor;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-dashoffset:0;}
+/*fill-opacity:0;fill:currentColor;stroke:currentColor;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;*/
+.dynamic{pointer-events:all;opacity:1;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;}
+</style>
+<!-- 矢印図形 -->
+<symbol id="symbol-arrow" viewBox="0 0 256 256"><path class="static" d="M 120 21 L 13 128 L 120 235 L 120 176 L 243 176 L 243 80 L 120 80 L 120 21 z "/></symbol>
+<symbol id="symbol-arrow-bi" viewBox="0 0 256 256"><path class="static" d="M 86,27 12,128 86,229 V 176 H 170 V 229 L 244,128 170,27 V 80 H 86 Z"/></symbol>
+<symbol id="symbol-arrow-row-2" viewBox="0 0 256 256"><path class="static" d="M 59 19 L 11 67 L 59 115 L 59 86 L 246 86 L 246 46 L 59 46 L 59 19 z "/></symbol>
+<symbol id="symbol-arrow-col-2" viewBox="0 0 256 256"><path class="static" d="M 60,36 14,128 59,220 59,167 H 112 V 89 H 60 Z"/></symbol>
+<symbol id="symbol-arrow-path-2" viewBox="0 0 256 256"><path class="static" d="M 76 20 L 12 84 L 76 147 L 76 110 L 196 110 L 196 246 L 245 246 L 245 61 L 244 61 L 244 61 L 76 61 L 76 20 z "/></symbol>
+<symbol id="symbol-arrow-path-3" viewBox="0 0 256 256"><path class="static" d="M 76 20 L 12 84 L 76 147 L 76 110 L 196 110 L 196 200 L 11 200 L 11 246 L 196 246 L 243 246 L 245 246 L 245 61 L 244 61 L 244 61 L 76 61 L 76 20 z "/></symbol>
+<symbol id="symbol-arrow-path-4" viewBox="0 0 256 256"><path class="static" d="M 76 20 L 12 84 L 76 147 L 76 110 L 196 110 L 196 200 L 61 200 L 61 165 L 12 165 L 12 200 L 11 200 L 11 246 L 196 246 L 243 246 L 245 246 L 245 61 L 244 61 L 244 61 L 76 61 L 76 20 z "/></symbol>
+<symbol id="symbol-arrow-step" viewBox="0 0 256 256"><path class="static" d="M 76 20 L 12 84 L 76 147 L 76 106 L 135 106 L 135 198 L 135 247 L 184 247 L 243 247 L 243 198 L 184 198 L 184 106 L 184 106 L 184 57 L 76 57 L 76 20 z "/></symbol>
+<symbol id="symbol-arrow-bi-row-2" viewBox="0 0 256 256"><path class="static" d="M 54 19 L 11 63 L 54 106 L 54 83 L 202 83 L 202 108 L 245 64 L 202 21 L 202 42 L 54 42 L 54 19 z "/></symbol>
+<symbol id="symbol-arrow-quad" viewBox="0 0 256 256"><path class="static" d="M 128 9 L 78 38 L 104 38 L 104 103 L 38 103 L 38 78 L 9 128 L 38 178 L 38 152 L 104 152 L 104 218 L 78 218 L 128 247 L 178 218 L 152 218 L 152 152 L 218 152 L 218 178 L 247 128 L 218 78 L 218 103 L 152 103 L 152 38 L 178 38 L 128 9 z "/></symbol>
+<symbol id="symbol-arrow-circle" viewBox="0 0 256 256"><path class="static" d="M 54,67 A 105,105 0 0 0 54,216 105,105 0 0 0 202,216 105,105 0 0 0 227,107 L 193,107 A 74,74 0 0 1 180,193 74,74 0 0 1 76,193 74,74 0 0 1 76,89 74,74 0 0 1 154,73 L 154,91 190,56 154,20 V 40 A 105,105 0 0 0 54,67 Z"/></symbol>
+
+<!-- uni-cone 八方向 -->
+<symbol id="icon-arrow-left" viewBox="0 0 256 256"><use href="#symbol-arrow" transform="rotate(0,128,128)"></use></symbol>
+<symbol id="icon-arrow-top-left" viewBox="0 0 256 256"><use href="#symbol-arrow" transform="rotate(45,128,128)"></use></symbol>
+<symbol id="icon-arrow-top" viewBox="0 0 256 256"><use href="#symbol-arrow" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-top-right" viewBox="0 0 256 256"><use href="#symbol-arrow" transform="rotate(135,128,128)"></use></symbol>
+<symbol id="icon-arrow-right" viewBox="0 0 256 256"><use href="#symbol-arrow" transform="rotate(180,128,128)"></use></symbol>
+<symbol id="icon-arrow-bottom-right" viewBox="0 0 256 256"><use href="#symbol-arrow" transform="rotate(225,128,128)"></use></symbol>
+<symbol id="icon-arrow-bottom" viewBox="0 0 256 256"><use href="#symbol-arrow" transform="rotate(270,128,128)"></use></symbol>
+<symbol id="icon-arrow-bottom-left" viewBox="0 0 256 256"><use href="#symbol-arrow" transform="rotate(315,128,128)"></use></symbol>
+<!-- bi-cone 四方向 -->
+<symbol id="icon-arrow-bi-0" viewBox="0 0 256 256"><use href="#symbol-arrow-bi" transform="rotate(0,128,128)"></use></symbol>
+<symbol id="icon-arrow-bi-45" viewBox="0 0 256 256"><use href="#symbol-arrow-bi" transform="rotate(45,128,128)"></use></symbol>
+<symbol id="icon-arrow-bi-90" viewBox="0 0 256 256"><use href="#symbol-arrow-bi" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-bi-135" viewBox="0 0 256 256"><use href="#symbol-arrow-bi" transform="rotate(135,128,128)"></use></symbol>
+
+<!-- row 四方向 LR -->
+<symbol id="icon-arrow-row-0-lr" viewBox="0 0 256 256">
+<use href="#symbol-arrow-row-2" transform="rotate(0,128,128)"></use>
+<use href="#symbol-arrow-row-2" transform="rotate(180,128,128)"></use>
+</symbol>
+<symbol id="icon-arrow-row-45-lr" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-lr" transform="rotate(45,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-row-90-lr" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-lr" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-row-135-lr" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-lr" transform="rotate(135,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+
+<!-- row 四方向 RL -->
+<symbol id="icon-arrow-row-0-rl" viewBox="0 0 256 256">
+<use href="#symbol-arrow-row-2" transform="rotate(180,128,128) translate(0,128)"></use>
+<use href="#symbol-arrow-row-2" transform="rotate(0,128,128) translate(0,128)"></use>
+</symbol>
+<symbol id="icon-arrow-row-45-rl" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-rl" transform="rotate(45,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-row-90-rl" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-rl" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-row-135-rl" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-rl" transform="rotate(135,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-row-45-lr" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-lr" transform="rotate(45,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-row-90-lr" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-lr" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-row-135-lr" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-lr" transform="rotate(135,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+
+<!-- row 同方向 八方向 -->
+<symbol id="icon-arrow-row-0-ll" viewBox="0 0 256 256">
+<use href="#symbol-arrow-row-2" transform="rotate(0,128,128)"></use>
+<use href="#symbol-arrow-row-2" transform="translate(0,128)"></use>
+</symbol>
+<symbol id="icon-arrow-row-45-ll" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-ll" transform="rotate(45,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-row-90-ll" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-ll" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-row-135-ll" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-ll" transform="rotate(135,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-row-180-ll" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-ll" transform="rotate(180,128,128)"></use></symbol>
+<symbol id="icon-arrow-row-225-ll" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-ll" transform="rotate(225,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-row-270-ll" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-ll" transform="rotate(270,128,128)"></use></symbol>
+<symbol id="icon-arrow-row-315-ll" viewBox="0 0 256 256"><use href="#icon-arrow-row-0-ll" transform="rotate(315,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+
+<!-- col 四方向 LR -->
+<symbol id="icon-arrow-col-0-lr" viewBox="0 0 256 256">
+<use href="#symbol-arrow-col-2" transform="rotate(0,128,128)"></use>
+<use href="#symbol-arrow-col-2" transform="rotate(180,128,128)"></use>
+</symbol>
+<symbol id="icon-arrow-col-45-lr" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-lr" transform="rotate(45,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-col-90-lr" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-lr" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-col-135-lr" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-lr" transform="rotate(135,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+
+<!-- col 四方向 RL -->
+<symbol id="icon-arrow-col-0-rl" viewBox="0 0 256 256">
+<use href="#symbol-arrow-col-2" transform="rotate(180,128,128) translate(128,0)"></use>
+<use href="#symbol-arrow-col-2" transform="rotate(0,128,128) translate(128,0)"></use>
+</symbol>
+<symbol id="icon-arrow-col-45-rl" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-rl" transform="rotate(45,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-col-90-rl" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-rl" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-col-135-rl" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-rl" transform="rotate(135,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+
+<!-- col 同方向 八方向 -->
+<symbol id="icon-arrow-col-0-ll" viewBox="0 0 256 256">
+<use href="#symbol-arrow-col-2" transform="rotate(0,128,128)"></use>
+<use href="#symbol-arrow-col-2" transform="translate(128,0)"></use>
+</symbol>
+<symbol id="icon-arrow-col-45-ll" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-ll" transform="rotate(45,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-col-90-ll" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-ll" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-col-135-ll" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-ll" transform="rotate(135,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-col-180-ll" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-ll" transform="rotate(180,128,128)"></use></symbol>
+<symbol id="icon-arrow-col-225-ll" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-ll" transform="rotate(225,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-col-270-ll" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-ll" transform="rotate(270,128,128)"></use></symbol>
+<symbol id="icon-arrow-col-315-ll" viewBox="0 0 256 256"><use href="#icon-arrow-col-0-ll" transform="rotate(315,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+
+<!-- bi-cone row 四方向 -->
+<symbol id="icon-arrow-bi-row-0" viewBox="0 0 256 256">
+<use href="#symbol-arrow-bi-row-2"></use>
+<use href="#symbol-arrow-bi-row-2" transform="translate(0,128)"></use>
+</symbol>
+<symbol id="icon-arrow-bi-row-45" viewBox="0 0 256 256"><use href="#icon-arrow-bi-row-0" transform="rotate(45,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<symbol id="icon-arrow-bi-row-90" viewBox="0 0 256 256"><use href="#icon-arrow-bi-row-0" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-bi-row-135" viewBox="0 0 256 256"><use href="#icon-arrow-bi-row-0" transform="rotate(135,128,128) scale(0.75,0.75) translate(48,48)"></use></symbol>
+<!-- quad-cone 二方向 -->
+<symbol id="icon-arrow-quad-0" viewBox="0 0 256 256"><use href="#symbol-arrow-quad"></use></symbol>
+<symbol id="icon-arrow-quad-45" viewBox="0 0 256 256"><use href="#symbol-arrow-quad" transform="rotate(45,128,128)"></use></symbol>
+
+<!-- path-2 八方向 反時計回り／時計回り-->
+<symbol id="icon-arrow-path-2-L-0" viewBox="0 0 256 256"><use href="#symbol-arrow-path-2"></use></symbol>
+<symbol id="icon-arrow-path-2-L-45" viewBox="0 0 256 256"><use href="#symbol-arrow-path-2" transform="rotate(45,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+<symbol id="icon-arrow-path-2-L-90" viewBox="0 0 256 256"><use href="#symbol-arrow-path-2" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-path-2-L-135" viewBox="0 0 256 256"><use href="#symbol-arrow-path-2" transform="rotate(135,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+<symbol id="icon-arrow-path-2-L-180" viewBox="0 0 256 256"><use href="#symbol-arrow-path-2" transform="rotate(180,128,128)"></use></symbol>
+<symbol id="icon-arrow-path-2-L-225" viewBox="0 0 256 256"><use href="#symbol-arrow-path-2" transform="rotate(225,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+<symbol id="icon-arrow-path-2-L-270" viewBox="0 0 256 256"><use href="#symbol-arrow-path-2" transform="rotate(270,128,128)"></use></symbol>
+<symbol id="icon-arrow-path-2-L-315" viewBox="0 0 256 256"><use href="#symbol-arrow-path-2" transform="rotate(315,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+
+<symbol id="icon-arrow-path-2-R-0" viewBox="0 0 256 256"><use href="#icon-arrow-path-2-L-0" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-2-R-45" viewBox="0 0 256 256"><use href="#icon-arrow-path-2-L-45" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-2-R-90" viewBox="0 0 256 256"><use href="#icon-arrow-path-2-L-90" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-2-R-135" viewBox="0 0 256 256"><use href="#icon-arrow-path-2-L-135" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-2-R-180" viewBox="0 0 256 256"><use href="#icon-arrow-path-2-L-180" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-2-R-225" viewBox="0 0 256 256"><use href="#icon-arrow-path-2-L-225" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-2-R-270" viewBox="0 0 256 256"><use href="#icon-arrow-path-2-L-270" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-2-R-315" viewBox="0 0 256 256"><use href="#icon-arrow-path-2-L-315" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+
+<!-- path-3 八方向 反時計回り／時計回り-->
+<symbol id="icon-arrow-path-3-L-0" viewBox="0 0 256 256"><use href="#symbol-arrow-path-3"></use></symbol>
+<symbol id="icon-arrow-path-3-L-45" viewBox="0 0 256 256"><use href="#symbol-arrow-path-3" transform="rotate(45,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+<symbol id="icon-arrow-path-3-L-90" viewBox="0 0 256 256"><use href="#symbol-arrow-path-3" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-path-3-L-135" viewBox="0 0 256 256"><use href="#symbol-arrow-path-3" transform="rotate(135,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+<symbol id="icon-arrow-path-3-L-180" viewBox="0 0 256 256"><use href="#symbol-arrow-path-3" transform="rotate(180,128,128)"></use></symbol>
+<symbol id="icon-arrow-path-3-L-225" viewBox="0 0 256 256"><use href="#symbol-arrow-path-3" transform="rotate(225,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+<symbol id="icon-arrow-path-3-L-270" viewBox="0 0 256 256"><use href="#symbol-arrow-path-3" transform="rotate(270,128,128)"></use></symbol>
+<symbol id="icon-arrow-path-3-L-315" viewBox="0 0 256 256"><use href="#symbol-arrow-path-3" transform="rotate(315,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+
+<symbol id="icon-arrow-path-3-R-0" viewBox="0 0 256 256"><use href="#icon-arrow-path-3-L-0" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-3-R-45" viewBox="0 0 256 256"><use href="#icon-arrow-path-3-L-45" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-3-R-90" viewBox="0 0 256 256"><use href="#icon-arrow-path-3-L-90" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-3-R-135" viewBox="0 0 256 256"><use href="#icon-arrow-path-3-L-135" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-3-R-180" viewBox="0 0 256 256"><use href="#icon-arrow-path-3-L-180" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-3-R-225" viewBox="0 0 256 256"><use href="#icon-arrow-path-3-L-225" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-3-R-270" viewBox="0 0 256 256"><use href="#icon-arrow-path-3-L-270" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-3-R-315" viewBox="0 0 256 256"><use href="#icon-arrow-path-3-L-315" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+
+<!-- path-4 八方向 反時計回り／時計回り-->
+<symbol id="icon-arrow-path-4-L-0" viewBox="0 0 256 256"><use href="#symbol-arrow-path-4"></use></symbol>
+<symbol id="icon-arrow-path-4-L-45" viewBox="0 0 256 256"><use href="#symbol-arrow-path-4" transform="rotate(45,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+<symbol id="icon-arrow-path-4-L-90" viewBox="0 0 256 256"><use href="#symbol-arrow-path-4" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-path-4-L-135" viewBox="0 0 256 256"><use href="#symbol-arrow-path-4" transform="rotate(135,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+<symbol id="icon-arrow-path-4-L-180" viewBox="0 0 256 256"><use href="#symbol-arrow-path-4" transform="rotate(180,128,128)"></use></symbol>
+<symbol id="icon-arrow-path-4-L-225" viewBox="0 0 256 256"><use href="#symbol-arrow-path-4" transform="rotate(225,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+<symbol id="icon-arrow-path-4-L-270" viewBox="0 0 256 256"><use href="#symbol-arrow-path-4" transform="rotate(270,128,128)"></use></symbol>
+<symbol id="icon-arrow-path-4-L-315" viewBox="0 0 256 256"><use href="#symbol-arrow-path-4" transform="rotate(315,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
+
+<symbol id="icon-arrow-path-4-R-0" viewBox="0 0 256 256"><use href="#icon-arrow-path-4-L-0" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-4-R-45" viewBox="0 0 256 256"><use href="#icon-arrow-path-4-L-45" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-4-R-90" viewBox="0 0 256 256"><use href="#icon-arrow-path-4-L-90" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-4-R-135" viewBox="0 0 256 256"><use href="#icon-arrow-path-4-L-135" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-4-R-180" viewBox="0 0 256 256"><use href="#icon-arrow-path-4-L-180" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-4-R-225" viewBox="0 0 256 256"><use href="#icon-arrow-path-4-L-225" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-4-R-270" viewBox="0 0 256 256"><use href="#icon-arrow-path-4-L-270" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+<symbol id="icon-arrow-path-4-R-315" viewBox="0 0 256 256"><use href="#icon-arrow-path-4-L-315" transform="scale(-1,1) translate(-256,0)"></use></symbol>
+
+<!-- circle 八方向 時計回り／反時計回り -->
+<symbol id="icon-arrow-circle-R-0" viewBox="0 0 256 256"><use href="#symbol-arrow-circle"></use></symbol>
+<symbol id="icon-arrow-circle-R-45" viewBox="0 0 256 256"><use href="#symbol-arrow-circle" transform="rotate(45,128,128)"></use></symbol>
+<symbol id="icon-arrow-circle-R-90" viewBox="0 0 256 256"><use href="#symbol-arrow-circle" transform="rotate(90,128,128)"></use></symbol>
+<symbol id="icon-arrow-circle-R-135" viewBox="0 0 256 256"><use href="#symbol-arrow-circle" transform="rotate(135,128,128)"></use></symbol>
+<symbol id="icon-arrow-circle-R-180" viewBox="0 0 256 256"><use href="#symbol-arrow-circle" transform="rotate(180,128,128)"></use></symbol>
+<symbol id="icon-arrow-circle-R-225" viewBox="0 0 256 256"><use href="#symbol-arrow-circle" transform="rotate(225,128,128)"></use></symbol>
+<symbol id="icon-arrow-circle-R-270" viewBox="0 0 256 256"><use href="#symbol-arrow-circle" transform="rotate(270,128,128)"></use></symbol>
+<symbol id="icon-arrow-circle-R-315" viewBox="0 0 256 256"><use href="#symbol-arrow-circle" transform="rotate(315,128,128)"></use></symbol>
+</defs>
+</svg>
