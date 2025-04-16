@@ -110,6 +110,21 @@
 <symbol id="icon-arrow-quad-0" viewBox="0 0 256 256"><use href="#symbol-arrow-quad"></use></symbol>
 <symbol id="icon-arrow-quad-45" viewBox="0 0 256 256"><use href="#symbol-arrow-quad" transform="rotate(45,128,128)"></use></symbol>
 
+<!-- 単方向 四つ -->
+<symbol id="icon-arrow-outside" viewBox="0 0 256 256">
+<use href="#icon-arrow-top-left" transform="scale(0.5,0.5) translate(0,0)"></use>
+<use href="#icon-arrow-top-right" transform="scale(0.5,0.5) translate(0,0)"></use>
+<use href="#icon-arrow-bottom-left" transform="scale(0.5,0.5) translate(0,0)"></use>
+<use href="#icon-arrow-bottom-right" transform="scale(0.5,0.5) translate(0,0)"></use>
+</symbol>
+<symbol id="icon-arrow-inside" viewBox="0 0 256 256">
+<use href="#icon-arrow-top-left" transform="scale(0.5,0.5) translate(0,0)"></use>
+<use href="#icon-arrow-top-right" transform="scale(0.5,0.5) translate(0,0)"></use>
+<use href="#icon-arrow-bottom-left" transform="scale(0.5,0.5) translate(0,0)"></use>
+<use href="#icon-arrow-bottom-right" transform="scale(0.5,0.5) translate(0,0)"></use>
+</symbol>
+
+
 <!-- path-2 八方向 反時計回り／時計回り-->
 <symbol id="icon-arrow-path-2-L-0" viewBox="0 0 256 256"><use href="#symbol-arrow-path-2"></use></symbol>
 <symbol id="icon-arrow-path-2-L-45" viewBox="0 0 256 256"><use href="#symbol-arrow-path-2" transform="rotate(45,128,128) scale(0.75,0.75) translate(40,40)"></use></symbol>
