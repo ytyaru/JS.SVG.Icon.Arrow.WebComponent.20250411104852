@@ -1,6 +1,4 @@
-class ArrowIconElement extends HTMLElement {
-    //static get observedAttributes() {return 'corn quad portrait landscape path step sz dir col wid join limit fill'.split(' ');}
-    static get observedAttributes() {return 'corn path step circle layout sz dir col wid join limit fill'.split(' ');}
+class ArrowSprite {
     static PATHS = new Map([
         ['base', 'M 120 21 L 13 128 L 120 235 L 120 176 L 243 176 L 243 80 L 120 80 L 120 21 z '],
         ['bi', 'M 86,27 12,128 86,229 V 176 H 170 V 229 L 244,128 170,27 V 80 H 86 Z'],
@@ -14,6 +12,102 @@ class ArrowIconElement extends HTMLElement {
         ['quad', 'M 128 9 L 78 38 L 104 38 L 104 103 L 38 103 L 38 78 L 9 128 L 38 178 L 38 152 L 104 152 L 104 218 L 78 218 L 128 247 L 178 218 L 152 218 L 152 152 L 218 152 L 218 178 L 247 128 L 218 78 L 218 103 L 152 103 L 152 38 L 178 38 L 128 9 z '],
         ['circle', 'M 54,67 A 105,105 0 0 0 54,216 105,105 0 0 0 202,216 105,105 0 0 0 227,107 L 193,107 A 74,74 0 0 1 180,193 74,74 0 0 1 76,193 74,74 0 0 1 76,89 74,74 0 0 1 154,73 L 154,91 190,56 154,20 V 40 A 105,105 0 0 0 54,67 Z'],
     ]);
+    static #mkSymbol(id, d) {return `<symbol id="${id}" viewBox="0 0 256 256"><path d="${d}"/></symbol>`}
+    static make() {return `<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"><defs>${ArrowIconElement.PATHS.map(([k,v])=>this.#mkSymbol(`symbol-arrow-${k}`, v)).join('')}</defs></svg>`}
+}
+class ArrowUse {
+    constructor() {
+        // PATHS選択
+        this._corn = 1; // 1/2/4
+        this._path = 1; // 1/2/3/4
+//        this._num = 1; // 1/2/4
+        this._layout = 'solo'; // solo/col/row/quad  -[iob](in/out/bi)
+//        this._portrait = false; // 0/1
+//        this._landscape = false; // 0/1
+        this._step = false; // 0/1
+        this._quarter = false; // 0/1
+        this._circle = false; // 0/1
+        // 属性
+        this._sz = `1em`;
+        this._col = `currentColor`;
+        this._dir = 0;
+        this._wid = 16;
+        this._join = 'miter'; // arcs|bevel|miter|miter-clip|round
+        this._limit = 4;
+        this._fill = 0; // fill-opacity
+        this._scale = 1;
+        //this._type = `normal`; // normal/bi/half-height/half-width(単方向／双方向／高さ半分／幅半分)
+//        this._bi = `0`; // 0/1 0:単方向 1:双方向(反対側にも矢印の頭が付く)
+    }
+    make(svgAttrs={}, useAttrs={}) {
+        console.log(svgAttrs, useAttrs)
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+        svg.setAttribute('viewBox', `0 0 256 256`);
+        ['width','height'].map(a=>svg.setAttribute(a, this._sz))
+//        svg.setAttribute('width', this._sz);
+//        svg.setAttribute('height', this._sz);
+        use.setAttribute('href', `#${this.#getPathName(options)}`);
+        use.setAttribute('transform', `${[this.#getRotate(), this.#getScale()].filter(v=>v).join(' ')}`);
+        this.#getTransform()
+        for (let [k,v] of Object.entries(svgAttrs)) {svg.setAttribute(k, v);}
+        for (let [k,v] of Object.entries(useAttrs)) {use.setAttribute(k, v);}
+        /*
+        use.setAttribute('href', `#${this._id}`);
+        use.setAttribute('fill', this._col);
+        use.setAttribute('stroke', this._col);
+        use.setAttribute('stroke-width', this._wid);
+        use.setAttribute('stroke-linejoin', this._join);
+        use.setAttribute('stroke-miterlimit', this._limit);
+        console.log(this._fill)
+        use.setAttribute('fill-opacity', this._fill); // 0.0〜1.0
+        svg.setAttribute('viewBox', `0 0 256 256`);
+        */
+        svg.append(use);
+        return svg
+    }
+    #use() {
+             if (options.layout.startsWith('r')){return `${(2===options.corn) ? 'bi-' : ''}row-2`}
+        else if (options.layout.startsWith('c')){return 'col-2'}
+        else if (options.layout.startsWith('q')){return 'base'}
+
+    }
+
+    #getPathName(options) {
+             if (options.layout.startsWith('r')){return `${(2===options.corn) ? 'bi-' : ''}row-2`}
+        else if (options.layout.startsWith('c')){return 'col-2'}
+        else if (options.layout.startsWith('q')){return 'base'}
+        else if (Number.isInteger(options.path) && 0<options.path && options.path<5) {return `path-${options.path}`}
+        else if (options.step) {return 'step'}
+        else if (options.circle) {return 'circle'}
+        else {return 4===options.corn ? 'quad' : (2===options.corn ? 'bi' : 'base')}
+    }
+    #getPathD() {return this.PATHS.get(this.#getPathName())}
+    #getPathStyle(options) {return `pointer-events:all;opacity:1;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;fill-opacity:${options.fill};fill:${options.col};stroke:${options.col};stroke-width:${options.layout.startsWith('quater') ? 32 : 16};stroke-linecap:butt;stroke-linejoin:${options.join};stroke-miterlimit:${options.limit}`}
+    #getSize() {return ({width:this._sz, height:this._sz})}
+    #getTransform() {const T = [this.#getRotate(), this.#getScale()].filter(v=>v); return T ? ({transform:T.join(' ')}) : ({});}
+    #getRotate() {const deg = this.#getDegree(); return 0===deg ? '' : `rotate(${deg},128,128)`}
+    #getScale() {return '1'===this._scale || 1===this._scale ? '' : `scale(${this._scale}, ${this._scale})`}
+    #getDegree() {
+             if ('left'===this._dir) {return 0}
+        else if ('top-left'===this._dir) {return 45}
+        else if ('top'===this._dir) {return 90}
+        else if ('top-right'===this._dir) {return 135}
+        else if ('right'===this._dir) {return 180}
+        else if ('bottom-right'===this._dir) {return 225}
+        else if ('bottom'===this._dir) {return 270}
+        else if ('bottom-left'===this._dir) {return 315}
+        else {
+            const deg = parseInt(this._dir);
+            if (Number.isNaN(deg)){throw new TypeError(`角度は0〜359かtop,bottom,left,right等の文字列で指定してください。`)}
+            else {return deg}
+        }
+    }
+
+}
+class ArrowIconElement extends HTMLElement {
+    //static get observedAttributes() {return 'corn quad portrait landscape path step sz dir col wid join limit fill'.split(' ');}
+    static get observedAttributes() {return 'corn path step circle layout sz dir col wid join limit fill'.split(' ');}
     #getPathName() {
              if (this._layout.startsWith('r')){return `${(2===this._corn) ? 'bi-' : ''}row-2`}
         else if (this._layout.startsWith('c')){return 'col-2'}
@@ -23,7 +117,11 @@ class ArrowIconElement extends HTMLElement {
         else if (this._circle) {return 'circle'}
         else {return 4===this._corn ? 'quad' : (2===this._corn ? 'bi' : 'base')}
     }
-    #getPath() {return ArrowIconElement.PATHS.get(this.#getPathName())}
+    #getPathD() {return ArrowIconElement.PATHS.get(this.#getPathName())}
+    #getPathStyle() {return `pointer-events:all;opacity:1;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;fill-opacity:${this._fill};fill:${this._col};stroke:${this._col};stroke-width:${this._layout.startsWith('quater') ? 32 : 16};stroke-linecap:butt;stroke-linejoin:${this._join};stroke-miterlimit:${this._limit}`}
+    #getUse() {
+        return `<svg width="${this._sz}" height="${this._sz}"><use href=""></use></svg>`
+    }
     constructor() {
         super();
         //this._id = `icon-symbol-arrow`;
@@ -49,7 +147,9 @@ class ArrowIconElement extends HTMLElement {
         //this._type = `normal`; // normal/bi/half-height/half-width(単方向／双方向／高さ半分／幅半分)
         this._bi = `0`; // 0/1 0:単方向 1:双方向(反対側にも矢印の頭が付く)
 //        if (!document.querySelector(`#${this._id}`)) {document.querySelector('head').append(this.#getArrowSymbol())}
-        if (!document.querySelector(`#${this._id}`)) {document.querySelector('head').insertAdjacentHTML('beforeend', this.#mkSprite())}
+//        if (!document.querySelector(`#${this._id}`)) {document.querySelector('head').insertAdjacentHTML('beforeend', this.#mkSprite())}
+        if (!document.querySelector(`#${this._id}`)) {document.querySelector('head').insertAdjacentHTML('beforeend', ArrowSprite.make())}
+        
     }
     connectedCallback() {
         setTimeout(()=>{
@@ -129,8 +229,6 @@ class ArrowIconElement extends HTMLElement {
         svg.append(defs)
         return svg
     }
-    #mkSymbol(id, d) {return `<symbol id="${id}" viewBox="0 0 256 256"><path d="${d}"/></symbol>`}
-    #mkSprite() {return `<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"><defs>${ArrowIconElement.PATHS.map(([k,v])=>this.#mkSymbol(`symbol-arrow-${k}`, v)).join('')}</defs></svg>`}
     /*
     #getPaths() { return {
         ' ': 'M 120 21 L 13 128 L 120 235 L 120 176 L 243 176 L 243 80 L 120 80 L 120 21 z ',
