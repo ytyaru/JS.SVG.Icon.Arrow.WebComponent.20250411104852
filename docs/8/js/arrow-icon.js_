@@ -16,8 +16,7 @@ class ArrowSprite {
     static make() {return `<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"><defs>${ArrowIconElement.PATHS.map(([k,v])=>this.#mkSymbol(`symbol-arrow-${k}`, v)).join('')}</defs></svg>`}
 }
 class ArrowUse {
-    constructor(options) {
-        this._options = {...ArrowUse.DefaultOptions, ...options}
+    constructor() {
         // PATHS選択
         this._corn = 1; // 1/2/4
         this._path = 1; // 1/2/3/4
@@ -40,35 +39,6 @@ class ArrowUse {
         //this._type = `normal`; // normal/bi/half-height/half-width(単方向／双方向／高さ半分／幅半分)
 //        this._bi = `0`; // 0/1 0:単方向 1:双方向(反対側にも矢印の頭が付く)
     }
-    static get DefaultOptions() { return {
-        corn:1, path:1, layout:'solo',
-        step:false, quarter:false, circle:false,
-        sz:'1em', col:'currentColor',
-        deg:0, wid:16, join:'miter',
-        limit:4, fill:0, scale:1,
-    } }
-    get corn() {return this._options.corn}
-    set corn(v) {this._options.corn=(Number.isInteger(v) && [1,2,4].some(x=>x===v)) ? v : 1}
-    get path() {return this._options.path}
-    set path(v) {this._options.path=(Number.isInteger(v) && 1<v && v<4) ? v : 1}
-    get layout() {return this._options.layout}
-    set layout(v) {
-        const IDS = 'col-bi col-in col-out row-bi row-in row-out quad-in quad-out'.split(' ');
-        const ABBRS = IDS.map(n=>{const p=n.split('-'); return p[0][0]+p[1][0]});
-        const i = ABBRS.findIndex(v);
-        this._options.layout = (IDS.some(id=>id===v)) ? v : ((-1<i) ? IDS[i] : 'solo');
-    }
-    get step() {return this._options.step}; set step(v) {this._options.step=!!v};
-    get quater() {return this._options.quater}; set quater(v) {this._options.quater=!!v};
-    get circle() {return this._options.circle}; set circle(v) {this._options.circle=!!v};
-    get sz() {return this._options.sz}; set sz(v) {this._options.sz=v};
-    get col() {return this._options.col}; set col(v) {this._options.col=v};
-    get deg() {return this._options.deg}; set deg(v) {this._options.deg=(Number.isNumber(v) ? v : 0)};
-    get limit() {return this._options.limit}; set limit(v) {this._options.limit=(Number.isNumber(v) ? v : 8)};
-    get wid() {return this._options.wid}; set wid(v) {this._options.wid=(Number.isNumber(v) ? v : 16)};
-    get fill() {return this._options.fill}; set fill(v) {this._options.fill=(Number.isNumber(v) && 0<=v && v<=1 ? v : 0)};
-    get scale() {return this._options.scale}; set scale(v) {this._options.scale=(Number.isNumber(v) ? v : 1)};
-    
     make(svgAttrs={}, useAttrs={}) {
         console.log(svgAttrs, useAttrs)
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
